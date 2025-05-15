@@ -4,9 +4,8 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 370px;
+  width: 330px;
   padding-top: 100px;
-  padding-right: 20px;
   color: $color-point;
   .logo {
     text-align: center;
@@ -28,8 +27,32 @@
         font-size: $font-size-xl;
         span {
           color: $color-white;
+          transition: 0.2s;
         }
       }
+      &:hover {
+        span {
+          color: $color-point;
+        }
+      }
+   }
+  }
+  .navbanner {
+    width: 220px;
+    margin: $space-xxl auto 0;
+    background-color: $color-secondary;
+    padding: $space-lg $space-lg $space-sm $space-lg;
+    border-radius: $radius-lg;
+    color: $color-white;
+    span {
+      color: $color-point;
+      font-weight: $font-weight-bold;
+    }
+    .bannericon {
+      color: $color-graybg;
+      opacity: 0.5;
+      font-size: $font-size-xxxl;
+      text-align: right;
     }
   }
 }

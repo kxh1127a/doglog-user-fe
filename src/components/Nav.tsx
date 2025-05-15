@@ -7,6 +7,7 @@ import { FaLightbulb } from "react-icons/fa";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { MdOutlinePets } from "react-icons/md";
 import { FaChartLine } from "react-icons/fa6";
+import { MdOutlineDesignServices } from "react-icons/md";
 
 const Nav = () => {
     return (
@@ -54,6 +55,18 @@ const Nav = () => {
                     </Link>
                 </li>
             </ul>
+
+            <div className={styles.navbanner}>
+                <p>
+                    회원가입을 하면<br/>
+                    우리집 댕댕이만의<br/>
+                    예쁜 <span>Pet Card</span>를<br/>
+                    만들 수 있어요
+                </p>
+                <div className={styles.bannericon}>
+                    <MdOutlineDesignServices/>
+                </div>
+            </div>
 
 
         </div>
