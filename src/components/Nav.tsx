@@ -10,6 +10,13 @@ const Nav = () => {
                     <img src="/logo.png" alt="doglog logo"/>
                 </Link>
             </h1>
+            <ul>
+                <li>
+                    <Link href="/">
+
+                    </Link>
+                </li>
+            </ul>
         </div>
     );
 };
