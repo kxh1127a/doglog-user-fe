@@ -1,10 +1,15 @@
 import React from 'react';
 import styles from '@/styles/Nav.module.scss'
+import Link from "next/link";
 
 const Nav = () => {
     return (
         <div className={styles.nav}>
-            navBar
+            <h1 className={styles.logo}>
+                <Link href="/">
+                    <img src="/logo.png" alt="doglog logo"/>
+                </Link>
+            </h1>
         </div>
     );
 };
