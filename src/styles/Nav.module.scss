@@ -15,13 +15,16 @@
     }
   }
   .menulist {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
     width: 200px;
-    margin: 40px auto 0;
+    margin: $space-xl auto 0;
     li {
       .menu {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: $space-md;
         font-size: $font-size-xl;
         span {
           color: $color-white;
