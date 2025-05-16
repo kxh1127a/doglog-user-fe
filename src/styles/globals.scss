@@ -1,5 +1,5 @@
 @import '@/styles/variables';
-
+@import '@/styles/mixins';
 
 html,
 body {
@@ -31,6 +31,11 @@ a {
   padding-left: 330px;
   padding-top: 75px;
   padding-right: 50px;
+  @include mini_desktop {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 45px;
+  }
 }
 .main-container {
   background-color: $color-background;

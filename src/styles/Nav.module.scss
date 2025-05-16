@@ -1,4 +1,5 @@
 @import '@/styles/variables';
+@import '@/styles/mixins';
 
 .nav {
   position: fixed;
@@ -7,10 +8,17 @@
   width: 330px;
   padding-top: 100px;
   color: $color-point;
+  @include mini_desktop {
+    position: relative;
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 30px;
+  }
   .logo {
     text-align: center;
     img {
       width: 220px;
+      max-width: 40vw;
     }
   }
   .menulist {
@@ -35,24 +43,21 @@
           color: $color-point;
         }
       }
-   }
-  }
-  .navbanner {
-    width: 220px;
-    margin: $space-xxl auto 0;
-    background-color: $color-secondary;
-    padding: $space-lg $space-lg $space-sm $space-lg;
-    border-radius: $radius-lg;
-    color: $color-white;
-    span {
-      color: $color-point;
-      font-weight: $font-weight-bold;
     }
-    .bannericon {
-      color: $color-graybg;
-      opacity: 0.5;
-      font-size: $font-size-xxxl;
-      text-align: right;
+    @include mini_desktop {
+      display: none;
+    }
+  }
+  .menubar {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-point;
+    font-size: 50px;
+    @include mini_desktop {
+      display: block;
     }
   }
 }
