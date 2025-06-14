@@ -37,6 +37,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $space-md;
+  margin-top: $space-xxl;
   .categoryBox {
     position: relative;
     height: 300px;
