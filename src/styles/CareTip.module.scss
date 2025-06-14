@@ -74,6 +74,24 @@
         }
       }
     }
+    &:nth-child(4) {
+      background: linear-gradient(62.78deg, #FAFAFC 7.96%, #FFF1EB 81.93%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #ED6540 1.06%, #F59B7F 99.01%);
+        span {
+          background: linear-gradient(90deg, #E65033 0%, #EB8E6F 100%);
+        }
+      }
+    }
+    &:nth-child(5) {
+      background: linear-gradient(60.9deg, #FAFAFC 8.89%, #E0ECDE 86.32%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #5BA758 1.06%, #91E27F 99.01%);
+        span {
+          background: linear-gradient(90deg, #05823F 0%, #39BC68 100%);
+        }
+      }
+    }
     .indexArea {
       position: absolute;
       right: 0;
