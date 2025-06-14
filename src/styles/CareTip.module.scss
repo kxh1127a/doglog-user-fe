@@ -41,7 +41,6 @@
     position: relative;
     height: 300px;
     border-radius: $radius-lg;
-    border: 1px solid #eee;
     &:first-child {
       grid-column: 1 / span 2;
       img {
@@ -66,6 +65,15 @@
         }
       }
     }
+    &:nth-child(3) {
+      background: linear-gradient(70.86deg, #FAFAFC 8.4%, #FFE5F6 96.07%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #F05BA2 1.06%, #F78BBE 99.01%);
+        span {
+          background: linear-gradient(90deg, #EE469A 0%, #F484BB 100%);
+        }
+      }
+    }
     .indexArea {
       position: absolute;
       right: 0;
@@ -76,11 +84,9 @@
       //background-color: $color-point;
       color: $color-white;
       //border-radius: 0 $radius-lg $radius-lg 0;
-
       border-radius: 0px 16px 16px 0px;
       overflow: hidden;
       span {
-
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
         width: 100%;
         display: block;

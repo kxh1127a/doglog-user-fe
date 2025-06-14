@@ -31,9 +31,21 @@ const Caretip = () => {
                         <span>2</span>
                     </div>
                 </div>
-                <div className={styles.categoryBox}>cc</div>
-                <div className={styles.categoryBox}>dd</div>
-                <div className={styles.categoryBox}>cc</div>
+                <div className={styles.categoryBox}>
+                    <div className={styles.indexArea}>
+                        <span>3</span>
+                    </div>
+                </div>
+                <div className={styles.categoryBox}>
+                    <div className={styles.indexArea}>
+                        <span>4</span>
+                    </div>
+                </div>
+                <div className={styles.categoryBox}>
+                    <div className={styles.indexArea}>
+                        <span>5</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
