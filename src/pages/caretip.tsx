@@ -12,10 +12,10 @@ const Caretip = () => {
             <MemberMenu />
             <div className={styles.searchContainer}>
                 <div className={styles.searchBox}>
-                    <input type="text"/>
                     <IoSearch />
+                    <input type="text" placeholder="검색어를 입력해주세요" />
                 </div>
-                <Link href="/likes">
+                <Link href="/likes" className={styles.likebtn}>
                     <FaRegHeart />
                 </Link>
             </div>
