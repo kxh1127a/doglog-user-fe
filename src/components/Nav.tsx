@@ -44,9 +44,9 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/content" className={styles.menu}>
+                    <Link href="/caretip" className={styles.menu}>
                         <MdOutlineArticle />
-                        <span>Content</span>
+                        <span>CareTip</span>
                     </Link>
                 </li>
                 <li>
