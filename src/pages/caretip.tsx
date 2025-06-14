@@ -19,6 +19,22 @@ const Caretip = () => {
                     <FaRegHeart />
                 </Link>
             </div>
+            <div className={styles.categories}>
+                <div className={styles.categoryBox}>
+                    <img src="/caretip_first.png" alt="초보자를 위한 가이드"/>
+                    <div className={styles.indexArea}>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div className={styles.categoryBox}>
+                    <div className={styles.indexArea}>
+                        <span>2</span>
+                    </div>
+                </div>
+                <div className={styles.categoryBox}>cc</div>
+                <div className={styles.categoryBox}>dd</div>
+                <div className={styles.categoryBox}>cc</div>
+            </div>
         </div>
     );
 };
