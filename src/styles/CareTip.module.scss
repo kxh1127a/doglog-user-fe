@@ -37,7 +37,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $space-md;
-  margin-top: $space-xxl;
+  margin-top: $space-lg;
   .categoryBox {
     position: relative;
     height: 300px;
@@ -169,6 +169,10 @@
         padding: $space-lg 0;
         font-size: $font-size-xl;
       }
+    }
+    .iconArea {
+      font-size: $font-size-xxxl;
+      margin-bottom: $space-md;
     }
   }
 }
