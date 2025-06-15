@@ -1,1 +1,1 @@
-export * from './caretip';
+export * from './caretips';

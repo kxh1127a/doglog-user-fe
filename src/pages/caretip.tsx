@@ -8,6 +8,8 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaDog, FaBone, FaTooth, FaHome, FaHeartbeat, FaScroll, FaHandHoldingHeart, FaBookOpen, FaTools, FaUserShield } from "react-icons/fa";
 import { GiDogBowl, GiJumpingDog } from "react-icons/gi";
 
+import { CategoryItem } from '@/interfaces';
+
 const categoryIcons: { [key: string]: JSX.Element } = {
     "건강관리": <FaHeartbeat />,
     "훈련·교육": <FaBookOpen />,
@@ -25,7 +27,7 @@ const categoryIcons: { [key: string]: JSX.Element } = {
 const Caretip = () => {
 
     // 카테고리 데이터 상태 저장
-    const [categories, setCategories] = useState<string[]>([]);
+    const [categories, setCategories] = useState<CategoryItem[]>([]);
 
     // 컴포넌트 마운트 시 API 호출
     useEffect(() => {
@@ -35,14 +37,11 @@ const Caretip = () => {
                 const result = await response.json();
 
                 if (result.isSuccess && Array.isArray(result.list)) {
-                    // 전체 이름 리스트 추출
-                    const names: string[] = result.list.map((item: any) => item.categoryName);
+                    const firstKey = "초보 애견인을 위한 핵심 가이드";
 
-                    // "초보 애견인을 위한 핵심 가이드"를 맨 앞으로...
-                    const firstItem = "초보 애견인을 위한 핵심 가이드";
                     const sorted = [
-                        firstItem,
-                        ...names.filter(name => name !== firstItem)
+                        ...result.list.filter((item: CategoryItem) => item.categoryName === firstKey),
+                        ...result.list.filter((item: CategoryItem) => item.categoryName !== firstKey)
                     ];
 
                     setCategories(sorted);
@@ -72,26 +71,26 @@ const Caretip = () => {
             </div>
             {/* 카테고리 리스트 보여주기 - 글이 없으면 안나오게할거에요 */}
             <div className={styles.categories}>
-                {categories.map((name, index) => (
-                    <div key={index} className={styles.categoryBox}>
-                        {/* 첫 번째 항목에만 이미지 표시하겠다.. */}
-                        {index === 0 && (
-                            <img src="/caretip_first.png" alt={name} />
-                        )}
+                {categories.map((item, index) => (
+                    <Link
+                        href={`/caretip/list?category=${item.category}`}
+                        key={item.category}
+                        className={styles.categoryBox}
+                    >
+                        {index === 0 && <img src="/caretip_first.png" alt={item.categoryName} />}
 
-                        {/* 첫 번째 항목은 아이콘 없이, 나머지는 아이콘 표시 */}
                         {index !== 0 && (
                             <div className={styles.iconArea}>
-                                {categoryIcons[name] || <FaDog />} {/* 기본 아이콘 */}
+                                {categoryIcons[item.categoryName] || <FaDog />}
                             </div>
                         )}
 
-                        <p className={styles.categoryName}>{name}</p>
+                        <p className={styles.categoryName}>{item.categoryName}</p>
 
                         <div className={styles.indexArea}>
                             <span>{index + 1}</span>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
