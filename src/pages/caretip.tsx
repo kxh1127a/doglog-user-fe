@@ -24,7 +24,7 @@ const categoryIcons: { [key: string]: JSX.Element } = {
     "건강관리": <FaHeartbeat />,
     "훈련·교육": <FaBookOpen />,
     "사료·간식·영양": <GiDogBowl />,
-    "초보 애견인을 위한 핵심 가이드": <FaDog />,
+    // "초보 애견인을 위한 핵심 가이드": <FaDog />,
     "애견 용품": <FaTools />,
     "위생/미용": <FaTooth />,
     "생활환경/주거": <FaHome />,
@@ -91,12 +91,14 @@ const Caretip = () => {
                             <img src="/caretip_first.png" alt={name} />
                         )}
 
-                        {/* 아이콘 표시 */}
-                        <div className={styles.iconArea}>
-                            {categoryIcons[name] || <FaDog />} {/* 기본 아이콘 */}
-                        </div>
+                        {/* 첫 번째 항목은 아이콘 없이, 나머지는 아이콘 표시 */}
+                        {index !== 0 && (
+                            <div className={styles.iconArea}>
+                                {categoryIcons[name] || <FaDog />} {/* 기본 아이콘 */}
+                            </div>
+                        )}
 
-                        <p>{name}</p>
+                        <p className={styles.categoryName}>{name}</p>
 
                         <div className={styles.indexArea}>
                             <span>{index + 1}</span>

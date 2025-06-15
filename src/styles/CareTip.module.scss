@@ -42,10 +42,11 @@
     position: relative;
     height: 300px;
     border-radius: $radius-lg;
-    padding: $space-xxl;
+    padding: $space-xxxl;
     &:first-child {
       grid-column: 1 / span 2;
-      padding-left: 500px;
+      padding-right: 100px;
+      text-align: right;
       img {
         position: absolute;
         left: 0;
@@ -148,6 +149,9 @@
           background: linear-gradient(90deg, #A96D25 0%, #E3B360 100%);
         }
       }
+    }
+    .categoryName {
+      font-size: $font-size-xl;
     }
     .indexArea {
       position: absolute;
