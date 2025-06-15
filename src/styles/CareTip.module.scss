@@ -3,7 +3,7 @@
 
 .searchContainer {
   display: flex;
-  gap: $space-sm;
+  gap: 8px;
   align-items: center;
   justify-content: flex-end;
   padding: $space-md 0;
@@ -37,7 +37,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $space-md;
-  margin-top: $space-lg;
+  margin-top: $space-sm;
   .categoryBox {
     position: relative;
     height: 300px;
@@ -152,6 +152,24 @@
     }
     .categoryName {
       font-size: $font-size-xl;
+      position: relative;
+      padding-bottom: $space-md;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 2px;
+        background-color: $color-text-secondary;
+      }
+    }
+    &:first-child {
+      .categoryName {
+        &::after {
+          content: none;  // 첫 번째 항목은 after 라인 제거
+        }
+      }
     }
     .indexArea {
       position: absolute;
@@ -176,7 +194,9 @@
     }
     .iconArea {
       font-size: $font-size-xxxl;
-      margin-bottom: $space-md;
+      color: $color-text;
+      margin-bottom: $space-sm;
+
     }
   }
 }
