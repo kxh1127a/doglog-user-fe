@@ -5,19 +5,7 @@ import Link from 'next/link';
 import { IoSearch } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 
-// 어울리는 아이콘을 불러오자!
-import {
-    FaDog,
-    FaBone,
-    FaTooth,
-    FaHome,
-    FaHeartbeat,
-    FaScroll,
-    FaHandHoldingHeart,
-    FaBookOpen,
-    FaTools,
-    FaUserShield
-} from "react-icons/fa";
+import { FaDog, FaBone, FaTooth, FaHome, FaHeartbeat, FaScroll, FaHandHoldingHeart, FaBookOpen, FaTools, FaUserShield } from "react-icons/fa";
 import { GiDogBowl, GiJumpingDog } from "react-icons/gi";
 
 const categoryIcons: { [key: string]: JSX.Element } = {
