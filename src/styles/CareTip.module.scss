@@ -42,8 +42,10 @@
     position: relative;
     height: 300px;
     border-radius: $radius-lg;
+    padding: $space-xxl;
     &:first-child {
       grid-column: 1 / span 2;
+      padding-left: 500px;
       img {
         position: absolute;
         left: 0;
@@ -90,6 +92,60 @@
         background: linear-gradient(88.79deg, #5BA758 1.06%, #91E27F 99.01%);
         span {
           background: linear-gradient(90deg, #05823F 0%, #39BC68 100%);
+        }
+      }
+    }
+    &:nth-child(6) {
+      background: linear-gradient(68.5deg, #FAFAFC 6.93%, #E2EDFB 97.56%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #4A80D8 1.06%, #A3C3F6 99.01%);
+        span {
+          background: linear-gradient(90deg, #2C63CE 0%, #6BAAF0 100%);
+        }
+      }
+    }
+    &:nth-child(7) {
+      background: linear-gradient(61.44deg, #FAFAFC 4.14%, #E8E7F9 97.5%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #775EDB 1.06%, #B9A6F6 99.01%);
+        span {
+          background: linear-gradient(90deg, #6040D3 0%, #9E8BF0 100%);
+        }
+      }
+    }
+    &:nth-child(8) {
+      background: linear-gradient(58.32deg, #FAFAFC 3.59%, #FFDED5 91.61%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #D06759 1.06%, #F4B7A6 99.01%);
+        span {
+          background: linear-gradient(90deg, #BE4E3E 0%, #F08A73 100%);
+        }
+      }
+    }
+    &:nth-child(9) {
+      background: linear-gradient(70.66deg, #FAFAFC 9.42%, #D3E7EA 92.76%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #3D9C96 1.06%, #8AD8D3 99.01%);
+        span {
+          background: linear-gradient(90deg, #267D78 0%, #61C3BD 100%);
+        }
+      }
+    }
+    &:nth-child(10) {
+      background: linear-gradient(69.2deg, #FAFAFC 8.11%, #F2E3FB 92.24%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #A03BB5 1.06%, #D9A9EC 99.01%);
+        span {
+          background: linear-gradient(90deg, #871DA1 0%, #C87FE0 100%);
+        }
+      }
+    }
+    &:nth-child(11) {
+      background: linear-gradient(60deg, #FAFAFC 6.87%, #FDEEDB 92.45%);
+      .indexArea {
+        background: linear-gradient(88.79deg, #C48432 1.06%, #F3D296 99.01%);
+        span {
+          background: linear-gradient(90deg, #A96D25 0%, #E3B360 100%);
         }
       }
     }
